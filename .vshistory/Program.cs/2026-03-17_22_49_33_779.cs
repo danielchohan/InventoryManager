@@ -2,10 +2,10 @@
 {
     internal class Program
     {
+        DatabaseManager db = new DatabaseManager();
         static void Main(string[] args)
         {
-            DatabaseManager db = new DatabaseManager();
-            db.InitializeDatabase();
+            Console.WriteLine("Hello, World!");
         }
     }
 }
