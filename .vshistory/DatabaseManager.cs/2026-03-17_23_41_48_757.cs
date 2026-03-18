@@ -45,7 +45,7 @@ namespace InventoryManager
         }
 
 
-        public List<Item> SelectAllItems()
+        public List<Item> SelecttAllItems()
         {
             var items = new List<Item>();
 

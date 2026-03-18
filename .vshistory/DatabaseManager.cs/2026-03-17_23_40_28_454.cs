@@ -45,7 +45,7 @@ namespace InventoryManager
         }
 
 
-        public List<Item> SelectAllItems()
+        public List<Item> SelecttAllItems()
         {
             var items = new List<Item>();
 
@@ -69,7 +69,7 @@ namespace InventoryManager
                 return items;
         }
 
-        public List<Item> SelectByName(string searchTerm)
+        public List<Item> SelectByName()
         {
             var items = new List<Item>();
 

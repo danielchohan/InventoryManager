@@ -45,7 +45,7 @@ namespace InventoryManager
         }
 
 
-        public List<Item> SelectAllItems()
+        public List<Item> SelecttAllItems()
         {
             var items = new List<Item>();
 
@@ -59,8 +59,7 @@ namespace InventoryManager
             while (reader.Read())
             {
                 items.Add(new Item
-                { 
-                Name = reader.GetString(0),
+                Name = reader.GetString(0)
                 Category = reader.GetString(1),
                 Quantity = reader.GetInt32(2),
                 Price = reader.GetDouble(3)
@@ -69,15 +68,9 @@ namespace InventoryManager
                 return items;
         }
 
-        public List<Item> SelectByName(string searchTerm)
+        public List<Item> SelectByName()
         {
             var items = new List<Item>();
-
-            using var connection = new SqliteConnection(ConnectionString);
-            connection.Open();
-
-            var command = connection.CreateCommand();
-            command.CommandText = @"Select Name, Category, Quantity, Price FROM Items WHERE Name = $name";
 
             return items;
         }
